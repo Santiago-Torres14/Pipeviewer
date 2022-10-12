@@ -27,14 +27,14 @@ impl Piperviewer {
         Self {
             infile: Some(file_name),
             outfile: Some(file_output),
-            silent: cli.silent
+            silent: cli.silent,
         }
     }
 
     fn check_arg(arg: Option<&str>) -> String {
         match arg {
             Some(i) => i.to_owned(),
-            None => String::default()
+            None => String::default(),
         }
     }
 }
@@ -44,7 +44,7 @@ impl Default for Piperviewer {
         Self {
             infile: None,
             outfile: None,
-            silent: false
+            silent: false,
         }
     }
 }
